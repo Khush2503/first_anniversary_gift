@@ -1,1 +1,22 @@
-<button type="button" class="btn btn-primary">Primary</button>
+<div class="welcome container">
+    <div class="form-login">
+        <div class="wrapper">
+            <span class="icon-close"><i class="bi bi-x"></i></span>
+            <div class="form-box login">
+                <form [formGroup]="loginForm" (ngSubmit)="onSubmit()">
+                    <div class="input-box">
+                        <span class="icon"><i class="bi bi-person-fill"></i></span>
+                        <input type="text" formControlName="user" class="form-control" required>
+                        <label>User Name</label>
+                    </div>
+                    <div class="input-box">
+                        <span class="icon"><i class="bi bi-lock-fill"></i></span>
+                        <input type="password" formControlName="password" class="form-control" required>
+                        <label>Password</label>
+                    </div>
+                    <button type="submit" class="btn btn-primary">Login</button>
+                </form>
+            </div>
+        </div>
+    </div>
+</div>
