@@ -1,20 +1,53 @@
 <div class="welcome container">
+    <div class="anniversary-text">
+        <h1 class="title">
+            <span>Happy Anniversary</span>
+            <span>Avvviiiiiiiiiiiii!</span>
+        </h1>
+        <h2 class="title">
+            <span>Here's to</span>
+            <span>many more years</span>
+            <span>of LOVE!</span>
+        </h2>
+        <h3 class="login-text">Log in for the surprise !</h3>
+    </div>
     <div class="form-login">
         <div class="wrapper">
-            <span class="icon-close"><i class="bi bi-x"></i></span>
             <div class="form-box login">
-                <form [formGroup]="loginForm" (ngSubmit)="onSubmit()">
+                <form [formGroup]="loginForm">
+                    <div *ngIf="(loginForm.controls['user'].invalid && (loginForm.controls['user'].dirty || loginForm.controls['user'].touched)) || (loginForm.controls['password'].invalid && (loginForm.controls['password'].dirty || loginForm.controls['password'].touched))"
+                        class="text-danger">
+                        <div
+                            *ngIf="loginForm.controls['user'].errors?.['required'] && loginForm.controls['password'].errors?.['required']">
+                            Enter correct details please!
+                        </div>
+                        <div
+                            *ngIf="!loginForm.controls['user'].errors?.['required'] && loginForm.controls['password'].errors?.['required']">
+                            Enter correct password please!
+                        </div>
+                        <div
+                            *ngIf="loginForm.controls['user'].errors?.['required'] && !loginForm.controls['password'].errors?.['required']">
+                            Enter correct user name please!
+                        </div>
+                    </div>
                     <div class="input-box">
                         <span class="icon"><i class="bi bi-person-fill"></i></span>
-                        <input type="text" formControlName="user" class="form-control" required>
+                        <input type="text" formControlName="user" required />
                         <label>User Name</label>
                     </div>
                     <div class="input-box">
                         <span class="icon"><i class="bi bi-lock-fill"></i></span>
-                        <input type="password" formControlName="password" class="form-control" required>
+                        <input type="password" formControlName="password" required />
                         <label>Password</label>
                     </div>
-                    <button type="submit" class="btn btn-primary">Login</button>
+                    <div class="form-check">
+                        <input class="form-check-input" formControlName="acceptTerms" type="checkbox" value=""
+                            id="flexCheckDefault" required />
+                        <label class="form-check-label" for="flexCheckDefault">
+                            Ready for the surprise??
+                        </label>
+                    </div>
+                    <button type="submit" (click)="onSubmit()" class="btn btn-primary">Sign In</button>
                 </form>
             </div>
         </div>
