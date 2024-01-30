@@ -3,7 +3,7 @@
   "version": 1,
   "newProjectRoot": "projects",
   "projects": {
-    "my_first_anniversary_gift_app": {
+    "my_app": {
       "projectType": "application",
       "schematics": {
         "@schematics/angular:component": {
@@ -17,7 +17,7 @@
         "build": {
           "builder": "@angular-devkit/build-angular:application",
           "options": {
-            "outputPath": "dist/my_first_anniversary_gift_app",
+            "outputPath": "dist/my_app",
             "index": "src/index.html",
             "browser": "src/main.ts",
             "polyfills": [
@@ -71,10 +71,10 @@
           "builder": "@angular-devkit/build-angular:dev-server",
           "configurations": {
             "production": {
-              "buildTarget": "my_first_anniversary_gift_app:build:production"
+              "buildTarget": "my_app:build:production"
             },
             "development": {
-              "buildTarget": "my_first_anniversary_gift_app:build:development"
+              "buildTarget": "my_app:build:development"
             }
           },
           "defaultConfiguration": "development"
@@ -82,7 +82,7 @@
         "extract-i18n": {
           "builder": "@angular-devkit/build-angular:extract-i18n",
           "options": {
-            "buildTarget": "my_first_anniversary_gift_app:build"
+            "buildTarget": "my_app:build"
           }
         },
         "test": {

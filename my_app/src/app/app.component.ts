@@ -10,5 +10,5 @@ import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
   styleUrl: './app.component.scss'
 })
 export class AppComponent {
-  title = 'my_first_anniversary_gift_app';
+  title = '_app';
 }
