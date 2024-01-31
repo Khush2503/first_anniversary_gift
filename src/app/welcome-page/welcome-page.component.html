@@ -16,7 +16,7 @@
             <div class="form-box login">
                 <form [formGroup]="loginForm">
                     <div *ngIf="(loginForm.controls['user'].invalid && (loginForm.controls['user'].dirty || loginForm.controls['user'].touched)) || (loginForm.controls['password'].invalid && (loginForm.controls['password'].dirty || loginForm.controls['password'].touched))"
-                        class="text-danger">
+                        class="alert alert-danger">
                         <div
                             *ngIf="loginForm.controls['user'].errors?.['required'] && loginForm.controls['password'].errors?.['required']">
                             Enter correct details please!
