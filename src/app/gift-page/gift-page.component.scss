@@ -1,0 +1,425 @@
+@import "https://fonts.googleapis.com/css?family=Baloo+Paaji";
+
+.parallax {
+  /* The image used */
+  background: linear-gradient(rgba(20, 20, 20, 0.8), rgba(20, 20, 20, 0)),
+    url("../../assets/images/img2.jpg"), no-repeat;
+  /* Set a specific height */
+  min-height: 100vh;
+
+  /* Create the parallax scrolling effect */
+  background-attachment: fixed;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  display: flex;
+  justify-content: center;
+  .date-display {
+    padding-top: 100px;
+    background: 50% 100% / 50% 50% no-repeat
+      radial-gradient(ellipse at bottom, #fff, transparent, transparent);
+    -webkit-background-clip: text;
+    background-clip: text;
+    color: transparent;
+    font-size: 15vh;
+    font-family: "Baloo Paaji", cursive;
+    animation: reveal 3000ms ease-in-out forwards 200ms,
+      glow 2500ms linear infinite 2000ms;
+
+    @keyframes reveal {
+      80% {
+        letter-spacing: 8px;
+      }
+      100% {
+        background-size: 300% 300%;
+      }
+    }
+    @keyframes glow {
+      40% {
+        text-shadow: 0 0 8px #fff;
+      }
+    }
+  }
+}
+
+.text-first {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  min-height: 60vh;
+  padding: 50px;
+  font-family: "Baloo Paaji", cursive;
+  background-color: #60000b;
+  color: #fcf6f5;
+  text-transform: uppercase;
+
+  h2 {
+    color: transparent;
+    -webkit-animation: blurFadeInOut 3s ease-in backwards;
+    -moz-animation: blurFadeInOut 3s ease-in backwards;
+    -ms-animation: blurFadeInOut 3s ease-in backwards;
+    animation: blurFadeInOut 3s ease-in backwards;
+  }
+
+  .frame-1 {
+    -webkit-animation: none;
+    -moz-animation: none;
+    -ms-animation: none;
+    animation: none;
+    color: transparent;
+    text-shadow: 0px 0px 1px #fff;
+
+    p {
+      -webkit-animation: blurFadeIn 3s ease-in 2s backwards;
+      -moz-animation: blurFadeIn 1s ease-in 2s backwards;
+      -ms-animation: blurFadeIn 3s ease-in 2s backwards;
+      animation: blurFadeIn 3s ease-in 2s backwards;
+      color: transparent;
+      text-shadow: 0px 0px 1px #fff;
+    }
+
+    p:nth-child(2) {
+      -webkit-animation-delay: 3s;
+      -moz-animation-delay: 3s;
+      -ms-animation-delay: 3s;
+      animation-delay: 3s;
+    }
+
+    p:nth-child(3) {
+      -webkit-animation-delay: 4s;
+      -moz-animation-delay: 4s;
+      -ms-animation-delay: 4s;
+      animation-delay: 4s;
+    }
+
+    p:nth-child(4) {
+      -webkit-animation-delay: 5s;
+      -moz-animation-delay: 5s;
+      -ms-animation-delay: 5s;
+      animation-delay: 5s;
+    }
+
+    @-webkit-keyframes blurFadeInOut {
+      0% {
+        opacity: 0;
+        text-shadow: 0px 0px 40px #fff;
+        -webkit-transform: scale(1.3);
+      }
+      20%,
+      75% {
+        opacity: 1;
+        text-shadow: 0px 0px 1px #fff;
+        -webkit-transform: scale(1);
+      }
+      100% {
+        opacity: 0;
+        text-shadow: 0px 0px 50px #fff;
+        -webkit-transform: scale(0);
+      }
+    }
+
+    @-webkit-keyframes blurFadeIn {
+      0% {
+        opacity: 0;
+        text-shadow: 0px 0px 40px #fff;
+        -webkit-transform: scale(1.3);
+      }
+      50% {
+        opacity: 0.5;
+        text-shadow: 0px 0px 10px #fff;
+        -webkit-transform: scale(1.1);
+      }
+      100% {
+        opacity: 1;
+        text-shadow: 0px 0px 1px #fff;
+        -webkit-transform: scale(1);
+      }
+    }
+
+    @-moz-keyframes blurFadeInOut {
+      0% {
+        opacity: 0;
+        text-shadow: 0px 0px 40px #fff;
+        -moz-transform: scale(1.3);
+      }
+      20%,
+      75% {
+        opacity: 1;
+        text-shadow: 0px 0px 1px #fff;
+        -moz-transform: scale(1);
+      }
+      100% {
+        opacity: 0;
+        text-shadow: 0px 0px 50px #fff;
+        -moz-transform: scale(0);
+      }
+    }
+    @-moz-keyframes blurFadeIn {
+      0% {
+        opacity: 0;
+        text-shadow: 0px 0px 40px #fff;
+        -moz-transform: scale(1.3);
+      }
+      100% {
+        opacity: 1;
+        text-shadow: 0px 0px 1px #fff;
+        -moz-transform: scale(1);
+      }
+    }
+
+    @keyframes blurFadeInOut {
+      0% {
+        opacity: 0;
+        text-shadow: 0px 0px 40px #fff;
+        transform: scale(1.3);
+      }
+      20%,
+      75% {
+        opacity: 1;
+        text-shadow: 0px 0px 1px #fff;
+        transform: scale(1);
+      }
+      100% {
+        opacity: 0;
+        text-shadow: 0px 0px 50px #fff;
+        transform: scale(0);
+      }
+    }
+    @keyframes blurFadeIn {
+      0% {
+        opacity: 0;
+        text-shadow: 0px 0px 40px #fff;
+        transform: scale(1.3);
+      }
+      50% {
+        opacity: 0.5;
+        text-shadow: 0px 0px 10px #fff;
+        transform: scale(1.1);
+      }
+      100% {
+        opacity: 1;
+        text-shadow: 0px 0px 1px #fff;
+        transform: scale(1);
+      }
+    }
+  }
+}
+
+.parallax-2 {
+  /* The image used */
+  background: url("../../assets/images/img5.jpg"), no-repeat;
+  /* Set a specific height */
+  min-height: 90vh;
+
+  /* Create the parallax scrolling effect */
+  background-attachment: fixed;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+.text-second {
+  background: #310404 url(https://i.ytimg.com/vi/wOvQAhzWCrM/maxresdefault.jpg)
+    no-repeat center center fixed;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding-top: 50px;
+  padding-bottom: 50px;
+  .carousel {
+    width: 70vw;
+    height: auto;
+    padding: 50px;
+  }
+}
+
+.parallax-3 {
+  /* The image used */
+  background: linear-gradient(rgba(20, 20, 20, 0), rgba(20, 20, 20, 0.8)),
+    url("../../assets/images/img7.jpg"), no-repeat;
+  /* Set a specific height */
+  min-height: 95vh;
+
+  /* Create the parallax scrolling effect */
+  background-attachment: fixed;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+.text-third {
+  font-family: "Baloo Paaji", cursive;
+  .container-fluid {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: right;
+  }
+  .couple-image {
+    height: 24em;
+    width: 24em;
+  }
+  padding: 40px;
+  padding-top: 60px;
+  .qoute-1 {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: right;
+    h3 {
+      font-size: 1.5em;
+      padding: 5px;
+    }
+    .first-line {
+      color: #940C0D;
+    }
+  }
+  img {
+    height: 100%;
+  }
+  .flip-card {
+    background-color: transparent;
+    height: 30em;
+    width: 24em;
+    perspective: 1000px;
+  }
+
+  .flip-card-inner {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    text-align: center;
+    transition: transform 0.6s;
+    transform-style: preserve-3d;
+    box-shadow: 0 8px 12px 0 rgba(0, 0, 0, 0.5);
+  }
+
+  .flip-card:hover .flip-card-inner {
+    transform: rotateY(180deg);
+  }
+
+  .flip-card-front,
+  .flip-card-back {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    -webkit-backface-visibility: hidden;
+    backface-visibility: hidden;
+  }
+
+  .flip-card-front {
+    background-color: #bbb;
+    color: black;
+  }
+
+  .flip-card-back {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #940C0D;
+    color: white;
+    transform: rotateY(180deg);
+    padding: 30px;
+    font-size: 2em;
+  }
+
+  .gallery {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding-right: 30px;
+    padding-left: 30px;
+  }
+}
+
+.parallax-4 {
+  /* The image used */
+  background: linear-gradient(rgba(20, 20, 20, 0), rgba(20, 20, 20, 0.5)),
+    url("../../assets/images/img3.jpg"), no-repeat;
+  /* Set a specific height */
+  min-height: 100vh;
+
+  /* Create the parallax scrolling effect */
+  background-attachment: fixed;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+.text-fourth {
+  background: #310404 url(https://i.ytimg.com/vi/wOvQAhzWCrM/maxresdefault.jpg)
+    no-repeat center center fixed;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+  height: 60vh;
+  padding: 50px;
+  font-family: "Baloo Paaji", cursive;
+
+  .video-text {
+    color: #fcf6f5;
+    font-size: 1.4rem;
+    h3 {
+      color: #ffe221;
+    }
+  }
+  a {
+    i {
+      font-size: 2em;
+        width: 60px;
+        border-radius: 50px;
+        float: left;
+    }
+  }
+
+  .logout {
+    font-size: 2em;
+    position: relative;
+    right: -18px;
+    bottom: -6px;
+    overflow: hidden;
+    letter-spacing: 2px;
+    opacity: 0;
+    transition: opacity .45s;
+    -webkit-transition: opacity .35s;
+    
+  }
+
+  .social-buttons {
+    display: block;
+    a {
+      border-radius: 10px;
+    }
+  }
+  
+  .button {
+    text-decoration: none;
+    float: right;
+    padding: 12px;
+    margin: 15px;
+    color: white;
+    width: 70px;
+    background-color: black;
+    transition: width .35s;
+    -webkit-transition: width .35s;
+    overflow: hidden
+  }
+  
+  a:hover {
+    width: 260px;
+  }
+  
+  a:hover .logout{
+    opacity: .9;
+  }
+  
+  a {
+    text-decoration: none;
+  }
+}
