@@ -5,7 +5,7 @@
   background: linear-gradient(rgba(20, 20, 20, 0.8), rgba(20, 20, 20, 0)),
     url("../../assets/images/img2.jpg"), no-repeat;
   /* Set a specific height */
-  min-height: 90vh;
+  min-height: 100vh;
 
   /* Create the parallax scrolling effect */
   background-attachment: fixed;
@@ -334,5 +334,92 @@
     align-items: center;
     padding-right: 30px;
     padding-left: 30px;
+  }
+}
+
+.parallax-4 {
+  /* The image used */
+  background: linear-gradient(rgba(20, 20, 20, 0), rgba(20, 20, 20, 0.5)),
+    url("../../assets/images/img3.jpg"), no-repeat;
+  /* Set a specific height */
+  min-height: 100vh;
+
+  /* Create the parallax scrolling effect */
+  background-attachment: fixed;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+.text-fourth {
+  background: #310404 url(https://i.ytimg.com/vi/wOvQAhzWCrM/maxresdefault.jpg)
+    no-repeat center center fixed;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+  height: 60vh;
+  padding: 50px;
+  font-family: "Baloo Paaji", cursive;
+
+  .video-text {
+    color: #fcf6f5;
+    font-size: 1.4rem;
+    h3 {
+      color: #ffe221;
+    }
+  }
+  a {
+    i {
+      font-size: 2em;
+        width: 60px;
+        border-radius: 50px;
+        float: left;
+    }
+  }
+
+  .logout {
+    font-size: 2em;
+    position: relative;
+    right: -18px;
+    bottom: -6px;
+    overflow: hidden;
+    letter-spacing: 2px;
+    opacity: 0;
+    transition: opacity .45s;
+    -webkit-transition: opacity .35s;
+    
+  }
+
+  .social-buttons {
+    display: block;
+    a {
+      border-radius: 10px;
+    }
+  }
+  
+  .button {
+    text-decoration: none;
+    float: right;
+    padding: 12px;
+    margin: 15px;
+    color: white;
+    width: 70px;
+    background-color: black;
+    transition: width .35s;
+    -webkit-transition: width .35s;
+    overflow: hidden
+  }
+  
+  a:hover {
+    width: 260px;
+  }
+  
+  a:hover .logout{
+    opacity: .9;
+  }
+  
+  a {
+    text-decoration: none;
   }
 }
