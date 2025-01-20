@@ -25,3 +25,14 @@ Run `ng e2e` to execute the end-to-end tests via a platform of your choice. To u
 ## Further help
 
 To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI Overview and Command Reference](https://angular.io/cli) page.
+
+## STEPS TO CLONE AND COMPILE THE APPLICATION
+
+1. Install git and check version `git --version`
+2. Install Node.js version 18 and check version `node -v` and `npm-v`
+3. Install Angular `npm install -g @angular/cli!17.1.0`
+4. Install dependencies `npm install`
+5. Set git user.name `git config --global user.name "Khush2503"`
+6. Set git user.email `git config --global user.email "khushboo143.jsr@gmail.com"`
+7. Verify git configuration `git config --list`
+8. Serve the application `npm run start`
